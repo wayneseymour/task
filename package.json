@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "jest": "^25.1.0"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": ["fp", "functional programming", "task", "task monad", "monad"],
+  "author": "wayneseymour",
   "license": "ISC"
 }
