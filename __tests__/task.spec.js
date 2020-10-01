@@ -16,6 +16,14 @@ describe(`task monad, the lazy, composable promise monad`, () => {
         data => expect(data).toBeTruthy(),
       );
     });
+    it(`should be a functor`, () => {
+      ls()
+        .map(x => x.toUpperCase())
+        .fork(
+        err => console.error(err),
+        data => expect(data.includes('.EDITORCONFIG')).toBeTruthy(),
+      );
+    });
   });
 });
 
