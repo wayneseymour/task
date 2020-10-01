@@ -1,5 +1,5 @@
 import {Task} from "../src";
-import { exec } from 'child_process';
+import {exec} from 'child_process';
 
 describe(`task monad, the lazy, composable promise monad`, () => {
   describe(`used with a callback`, () => {
@@ -20,9 +20,9 @@ describe(`task monad, the lazy, composable promise monad`, () => {
       ls()
         .map(x => x.toUpperCase())
         .fork(
-        err => console.error(err),
-        data => expect(data.includes('.EDITORCONFIG')).toBeTruthy(),
-      );
+          err => console.error(err),
+          data => expect(data.includes('.EDITORCONFIG')).toBeTruthy(),
+        );
     });
     it(`should be a monad`, () => {
       ls()
