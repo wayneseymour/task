@@ -9,4 +9,10 @@ export const Task = (fork) => ({
       )
     )
   ),
+  chain: f => Task((rej, res) =>
+    fork(
+      (a) => rej(a),
+      (b) => f(b).fork(rej, res)
+    )
+  )
 });
